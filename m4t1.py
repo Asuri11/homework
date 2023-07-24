@@ -1,11 +1,6 @@
-import random
+def palindrome(s): 
+    return s[::-1] == s 
 
-file = open('data.txt', 'w')
-
-#my_list = [int(i) for i in file]
-
-for _ in range(10000):
-    num = random.randint(1,10000)
-    file.write(str(num) + '\n')
-
-file.close()
+while True: 
+    s = input("введите слово: ") 
+    print(f"{s} - слово являющееся палиндромом" if palindrome(s) else f"{s} - слово не являющееся палиндромом")
